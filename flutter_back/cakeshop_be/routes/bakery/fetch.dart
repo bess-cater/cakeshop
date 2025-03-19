@@ -17,7 +17,7 @@ Future<Response> onRequest(RequestContext context) async {
 Future<Response> _getBakeries() async {
   final prisma = PrismaClient(
   datasources: Datasources(
-    db: ""));
+    db: "db"));
   // print("eheheh");
   final bakeries = await prisma.bakery.findMany();
   // print("aaaaa");
@@ -42,7 +42,7 @@ Future<Response> _createBakery(RequestContext context) async {
   
   final prisma = PrismaClient(
   datasources: Datasources(
-    db: ""));
+    db: "db"));
   
   prisma.bakery.create(data: BakeryCreateInput(
     bakeryName: bakeryName, 

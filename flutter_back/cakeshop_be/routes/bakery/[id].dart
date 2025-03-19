@@ -17,7 +17,7 @@ return switch (context.request.method) {
 Future<Response> _getBakeryById(String id) async {
   final prisma = PrismaClient(
   datasources: Datasources(
-    db: ""));
+    db: "db"));
   // print("eheheh");
   final bakery = await prisma.bakery.findUnique(
   where: BakeryWhereUniqueInput(bakeryId: int.parse(id)),

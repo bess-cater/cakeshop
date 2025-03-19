@@ -1,0 +1,32 @@
+generator client {
+  provider = "dart run orm"
+  output   = "."
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model bakery {
+  BAKERY_ID   Int     @id @default(autoincrement())
+  BAKERY_NAME String? @db.VarChar(255)
+  ADDRESS     String? @db.VarChar(255)
+  DESCRIPTION String? @db.Text
+  OPEN        Int?
+  CLOSE       Int?
+  URL         String? @db.VarChar(255)
+  cake        cake[]
+}
+
+model cake {
+  CAKE_ID       Int     @id @default(autoincrement())
+  BAKERY_ID     Int?
+  CAKE_NAME     String  @db.VarChar(255)
+  CAKE_CATEGORY String? @db.VarChar(255)
+  INGREDIENTS   String? @db.Text
+  URL           String? @db.VarChar(255)
+  bakery        bakery? @relation(fields: [BAKERY_ID], references: [BAKERY_ID], onDelete: NoAction, onUpdate: NoAction, map: "cake_ibfk_1")
+
+  @@index([BAKERY_ID], map: "BAKERY_ID")
+}

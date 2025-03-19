@@ -1,5 +1,5 @@
+import 'package:cakeshop_be/src/generated/prisma/prisma_client.dart';
 import 'package:dart_frog/dart_frog.dart';
-import '../../lib/src/generated/prisma/prisma_client.dart';
 
 
 
@@ -16,14 +16,14 @@ Future<Response> onRequest(RequestContext context) async {
 
 Future<Response> _getBakeries() async {
   final prisma = PrismaClient(
-  datasources: Datasources(
-    db: "mysql://root:vocal50tu!@localhost:3306/cakeshop"));
+  datasources: const Datasources(
+    db: 'mysql://root:vocal50tu!@localhost:3306/cakeshop',),);
   // print("eheheh");
   final bakeries = await prisma.bakery.findMany();
   // print("aaaaa");
   // print(bakeries);
   return Future.value(Response.json(
-    body: bakeries.map((b) => b.toJson()).toList()));
+    body: bakeries.map((b) => b.toJson()).toList(),),);
     
 }
 
@@ -41,8 +41,8 @@ Future<Response> _createBakery(RequestContext context) async {
   }
   
   final prisma = PrismaClient(
-  datasources: Datasources(
-    db: "mysql://root:vocal50tu!@localhost:3306/cakeshop"));
+  datasources: const Datasources(
+    db: 'mysql://root:vocal50tu!@localhost:3306/cakeshop',),);
   
   prisma.bakery.create(data: BakeryCreateInput(
     bakeryName: bakeryName, 
@@ -50,7 +50,7 @@ Future<Response> _createBakery(RequestContext context) async {
     description: description, 
     open: open, 
     close: close, 
-    url: url))
+    url: url,),)
 ;
   print(bakeryName);
   return Response(statusCode: 201, body: 'Created!!');

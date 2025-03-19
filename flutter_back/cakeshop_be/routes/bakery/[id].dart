@@ -1,5 +1,5 @@
 import 'package:dart_frog/dart_frog.dart';
-import '../../lib/src/generated/prisma/prisma_client.dart';
+import 'package:cakeshop_be/src/generated/prisma/prisma_client.dart';
 
 Future<Response> onRequest(
   RequestContext context,
@@ -16,8 +16,8 @@ return switch (context.request.method) {
 
 Future<Response> _getBakeryById(String id) async {
   final prisma = PrismaClient(
-  datasources: Datasources(
-    db: "mysql://root:vocal50tu!@localhost:3306/cakeshop"));
+  datasources: const Datasources(
+    db: 'mysql://root:vocal50tu!@localhost:3306/cakeshop',),);
   // print("eheheh");
   final bakery = await prisma.bakery.findUnique(
   where: BakeryWhereUniqueInput(bakeryId: int.parse(id)),
@@ -25,7 +25,7 @@ Future<Response> _getBakeryById(String id) async {
   if (bakery == null) {
   return Response.json(body: {'error': 'bakery not found'}, statusCode: 404);
 }
-  int bId = bakery.bakeryId;
+  final bId = bakery.bakeryId;
   final filter = IntNullableFilter(equals: bId);
   final cakes = await prisma.cake.findMany(
   where: CakeWhereInput(bakeryId: filter),
@@ -45,10 +45,10 @@ Future<Response> _getBakeryById(String id) async {
       'cake_name': cake.cakeName,
       'ingredients': cake.ingredients,
       'category': cake.cakeCategory,
-      'url': cake.url
-    }).toList(),
+      'url': cake.url,
+    },).toList(),
   },
-  ));
+  ),);
 }
 
 Future<Response> _deleteBakery(String id){

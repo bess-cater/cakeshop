@@ -13,19 +13,19 @@ part 'prisma_client.g.dart';
 
 enum BakeryScalarFieldEnum implements _i1.PrismaEnum {
   @JsonValue('BAKERY_ID')
-  bakeryId(r'BAKERY_ID'),
+  bakeryId('BAKERY_ID'),
   @JsonValue('BAKERY_NAME')
-  bakeryName(r'BAKERY_NAME'),
+  bakeryName('BAKERY_NAME'),
   @JsonValue('ADDRESS')
-  address(r'ADDRESS'),
+  address('ADDRESS'),
   @JsonValue('DESCRIPTION')
-  description(r'DESCRIPTION'),
+  description('DESCRIPTION'),
   @JsonValue('OPEN')
-  open(r'OPEN'),
+  open('OPEN'),
   @JsonValue('CLOSE')
-  close(r'CLOSE'),
+  close('CLOSE'),
   @JsonValue('URL')
-  url(r'URL');
+  url('URL');
 
   const BakeryScalarFieldEnum([this.originalName]);
 
@@ -35,17 +35,17 @@ enum BakeryScalarFieldEnum implements _i1.PrismaEnum {
 
 enum CakeScalarFieldEnum implements _i1.PrismaEnum {
   @JsonValue('CAKE_ID')
-  cakeId(r'CAKE_ID'),
+  cakeId('CAKE_ID'),
   @JsonValue('BAKERY_ID')
-  bakeryId(r'BAKERY_ID'),
+  bakeryId('BAKERY_ID'),
   @JsonValue('CAKE_NAME')
-  cakeName(r'CAKE_NAME'),
+  cakeName('CAKE_NAME'),
   @JsonValue('CAKE_CATEGORY')
-  cakeCategory(r'CAKE_CATEGORY'),
+  cakeCategory('CAKE_CATEGORY'),
   @JsonValue('INGREDIENTS')
-  ingredients(r'INGREDIENTS'),
+  ingredients('INGREDIENTS'),
   @JsonValue('URL')
-  url(r'URL');
+  url('URL');
 
   const CakeScalarFieldEnum([this.originalName]);
 
@@ -94,25 +94,25 @@ class BakeryWhereInput implements _i1.JsonSerializable {
 
   final Iterable<BakeryWhereInput>? NOT;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntFilter? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final StringNullableFilter? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final StringNullableFilter? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final StringNullableFilter? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final IntNullableFilter? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final IntNullableFilter? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final StringNullableFilter? url;
 
   final CakeListRelationFilter? cake;
@@ -137,25 +137,25 @@ class BakeryOrderByWithRelationInput implements _i1.JsonSerializable {
   factory BakeryOrderByWithRelationInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryOrderByWithRelationInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final SortOrder? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final SortOrder? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final SortOrder? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   final CakeOrderByRelationAggregateInput? cake;
@@ -171,7 +171,7 @@ class BakeryWhereUniqueInput implements _i1.JsonSerializable {
   factory BakeryWhereUniqueInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryWhereUniqueInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
   @override
@@ -196,43 +196,43 @@ class BakeryOrderByWithAggregationInput implements _i1.JsonSerializable {
   });
 
   factory BakeryOrderByWithAggregationInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryOrderByWithAggregationInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final SortOrder? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final SortOrder? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final SortOrder? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final BakeryCountOrderByAggregateInput? $count;
 
-  @JsonKey(name: r'_avg')
+  @JsonKey(name: '_avg')
   final BakeryAvgOrderByAggregateInput? $avg;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final BakeryMaxOrderByAggregateInput? $max;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final BakeryMinOrderByAggregateInput? $min;
 
-  @JsonKey(name: r'_sum')
+  @JsonKey(name: '_sum')
   final BakerySumOrderByAggregateInput? $sum;
 
   @override
@@ -256,7 +256,7 @@ class BakeryScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
   });
 
   factory BakeryScalarWhereWithAggregatesInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryScalarWhereWithAggregatesInputFromJson(json);
 
   final Iterable<BakeryScalarWhereWithAggregatesInput>? AND;
@@ -265,25 +265,25 @@ class BakeryScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
 
   final Iterable<BakeryScalarWhereWithAggregatesInput>? NOT;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntWithAggregatesFilter? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final StringNullableWithAggregatesFilter? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final StringNullableWithAggregatesFilter? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final StringNullableWithAggregatesFilter? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final IntNullableWithAggregatesFilter? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final IntNullableWithAggregatesFilter? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final StringNullableWithAggregatesFilter? url;
 
   @override
@@ -315,22 +315,22 @@ class CakeWhereInput implements _i1.JsonSerializable {
 
   final Iterable<CakeWhereInput>? NOT;
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntFilter? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntNullableFilter? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFilter? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final StringNullableFilter? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final StringNullableFilter? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final StringNullableFilter? url;
 
   final BakeryRelationFilter? bakery;
@@ -354,22 +354,22 @@ class CakeOrderByWithRelationInput implements _i1.JsonSerializable {
   factory CakeOrderByWithRelationInput.fromJson(Map<String, dynamic> json) =>
       _$CakeOrderByWithRelationInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final SortOrder? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final SortOrder? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final SortOrder? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   final BakeryOrderByWithRelationInput? bakery;
@@ -385,7 +385,7 @@ class CakeWhereUniqueInput implements _i1.JsonSerializable {
   factory CakeWhereUniqueInput.fromJson(Map<String, dynamic> json) =>
       _$CakeWhereUniqueInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int? cakeId;
 
   @override
@@ -411,37 +411,37 @@ class CakeOrderByWithAggregationInput implements _i1.JsonSerializable {
   factory CakeOrderByWithAggregationInput.fromJson(Map<String, dynamic> json) =>
       _$CakeOrderByWithAggregationInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final SortOrder? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final SortOrder? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final SortOrder? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final CakeCountOrderByAggregateInput? $count;
 
-  @JsonKey(name: r'_avg')
+  @JsonKey(name: '_avg')
   final CakeAvgOrderByAggregateInput? $avg;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final CakeMaxOrderByAggregateInput? $max;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final CakeMinOrderByAggregateInput? $min;
 
-  @JsonKey(name: r'_sum')
+  @JsonKey(name: '_sum')
   final CakeSumOrderByAggregateInput? $sum;
 
   @override
@@ -464,7 +464,7 @@ class CakeScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
   });
 
   factory CakeScalarWhereWithAggregatesInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeScalarWhereWithAggregatesInputFromJson(json);
 
   final Iterable<CakeScalarWhereWithAggregatesInput>? AND;
@@ -473,22 +473,22 @@ class CakeScalarWhereWithAggregatesInput implements _i1.JsonSerializable {
 
   final Iterable<CakeScalarWhereWithAggregatesInput>? NOT;
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntWithAggregatesFilter? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntNullableWithAggregatesFilter? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringWithAggregatesFilter? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final StringNullableWithAggregatesFilter? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final StringNullableWithAggregatesFilter? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final StringNullableWithAggregatesFilter? url;
 
   @override
@@ -511,22 +511,22 @@ class BakeryCreateInput implements _i1.JsonSerializable {
   factory BakeryCreateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryCreateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   final CakeCreateNestedManyWithoutBakeryInput? cake;
@@ -551,25 +551,25 @@ class BakeryUncheckedCreateInput implements _i1.JsonSerializable {
   factory BakeryUncheckedCreateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryUncheckedCreateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   final CakeUncheckedCreateNestedManyWithoutBakeryInput? cake;
@@ -593,22 +593,22 @@ class BakeryUpdateInput implements _i1.JsonSerializable {
   factory BakeryUpdateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryUpdateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final NullableStringFieldUpdateOperationsInput? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final NullableStringFieldUpdateOperationsInput? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final NullableStringFieldUpdateOperationsInput? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final NullableIntFieldUpdateOperationsInput? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final NullableIntFieldUpdateOperationsInput? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   final CakeUpdateManyWithoutBakeryNestedInput? cake;
@@ -633,25 +633,25 @@ class BakeryUncheckedUpdateInput implements _i1.JsonSerializable {
   factory BakeryUncheckedUpdateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryUncheckedUpdateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntFieldUpdateOperationsInput? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final NullableStringFieldUpdateOperationsInput? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final NullableStringFieldUpdateOperationsInput? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final NullableStringFieldUpdateOperationsInput? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final NullableIntFieldUpdateOperationsInput? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final NullableIntFieldUpdateOperationsInput? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   final CakeUncheckedUpdateManyWithoutBakeryNestedInput? cake;
@@ -675,25 +675,25 @@ class BakeryCreateManyInput implements _i1.JsonSerializable {
   factory BakeryCreateManyInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryCreateManyInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -714,22 +714,22 @@ class BakeryUpdateManyMutationInput implements _i1.JsonSerializable {
   factory BakeryUpdateManyMutationInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryUpdateManyMutationInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final NullableStringFieldUpdateOperationsInput? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final NullableStringFieldUpdateOperationsInput? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final NullableStringFieldUpdateOperationsInput? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final NullableIntFieldUpdateOperationsInput? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final NullableIntFieldUpdateOperationsInput? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -751,25 +751,25 @@ class BakeryUncheckedUpdateManyInput implements _i1.JsonSerializable {
   factory BakeryUncheckedUpdateManyInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryUncheckedUpdateManyInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntFieldUpdateOperationsInput? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final NullableStringFieldUpdateOperationsInput? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final NullableStringFieldUpdateOperationsInput? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final NullableStringFieldUpdateOperationsInput? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final NullableIntFieldUpdateOperationsInput? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final NullableIntFieldUpdateOperationsInput? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -789,16 +789,16 @@ class CakeCreateInput implements _i1.JsonSerializable {
   factory CakeCreateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeCreateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   final BakeryCreateNestedOneWithoutCakeInput? bakery;
@@ -810,9 +810,8 @@ class CakeCreateInput implements _i1.JsonSerializable {
 @_i1.jsonSerializable
 class CakeUncheckedCreateInput implements _i1.JsonSerializable {
   const CakeUncheckedCreateInput({
-    this.cakeId,
+    required this.cakeName, this.cakeId,
     this.bakeryId,
-    required this.cakeName,
     this.cakeCategory,
     this.ingredients,
     this.url,
@@ -821,22 +820,22 @@ class CakeUncheckedCreateInput implements _i1.JsonSerializable {
   factory CakeUncheckedCreateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeUncheckedCreateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -856,16 +855,16 @@ class CakeUpdateInput implements _i1.JsonSerializable {
   factory CakeUpdateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeUpdateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   final BakeryUpdateOneWithoutCakeNestedInput? bakery;
@@ -888,22 +887,22 @@ class CakeUncheckedUpdateInput implements _i1.JsonSerializable {
   factory CakeUncheckedUpdateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeUncheckedUpdateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntFieldUpdateOperationsInput? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final NullableIntFieldUpdateOperationsInput? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -913,9 +912,8 @@ class CakeUncheckedUpdateInput implements _i1.JsonSerializable {
 @_i1.jsonSerializable
 class CakeCreateManyInput implements _i1.JsonSerializable {
   const CakeCreateManyInput({
-    this.cakeId,
+    required this.cakeName, this.cakeId,
     this.bakeryId,
-    required this.cakeName,
     this.cakeCategory,
     this.ingredients,
     this.url,
@@ -924,22 +922,22 @@ class CakeCreateManyInput implements _i1.JsonSerializable {
   factory CakeCreateManyInput.fromJson(Map<String, dynamic> json) =>
       _$CakeCreateManyInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -958,16 +956,16 @@ class CakeUpdateManyMutationInput implements _i1.JsonSerializable {
   factory CakeUpdateManyMutationInput.fromJson(Map<String, dynamic> json) =>
       _$CakeUpdateManyMutationInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -988,22 +986,22 @@ class CakeUncheckedUpdateManyInput implements _i1.JsonSerializable {
   factory CakeUncheckedUpdateManyInput.fromJson(Map<String, dynamic> json) =>
       _$CakeUncheckedUpdateManyInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntFieldUpdateOperationsInput? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final NullableIntFieldUpdateOperationsInput? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -1028,7 +1026,7 @@ class IntFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -1068,7 +1066,7 @@ class StringNullableFilter implements _i1.JsonSerializable {
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -1111,7 +1109,7 @@ class IntNullableFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -1174,10 +1172,10 @@ class CakeOrderByRelationAggregateInput implements _i1.JsonSerializable {
   const CakeOrderByRelationAggregateInput({this.$count});
 
   factory CakeOrderByRelationAggregateInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeOrderByRelationAggregateInputFromJson(json);
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final SortOrder? $count;
 
   @override
@@ -1198,28 +1196,28 @@ class BakeryCountOrderByAggregateInput implements _i1.JsonSerializable {
   });
 
   factory BakeryCountOrderByAggregateInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryCountOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final SortOrder? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final SortOrder? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final SortOrder? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   @override
@@ -1238,13 +1236,13 @@ class BakeryAvgOrderByAggregateInput implements _i1.JsonSerializable {
   factory BakeryAvgOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryAvgOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
   @override
@@ -1266,25 +1264,25 @@ class BakeryMaxOrderByAggregateInput implements _i1.JsonSerializable {
   factory BakeryMaxOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryMaxOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final SortOrder? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final SortOrder? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final SortOrder? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   @override
@@ -1306,25 +1304,25 @@ class BakeryMinOrderByAggregateInput implements _i1.JsonSerializable {
   factory BakeryMinOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryMinOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final SortOrder? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final SortOrder? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final SortOrder? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   @override
@@ -1342,13 +1340,13 @@ class BakerySumOrderByAggregateInput implements _i1.JsonSerializable {
   factory BakerySumOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$BakerySumOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final SortOrder? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final SortOrder? close;
 
   @override
@@ -1378,7 +1376,7 @@ class IntWithAggregatesFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -1393,19 +1391,19 @@ class IntWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedIntWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntFilter? $count;
 
-  @JsonKey(name: r'_avg')
+  @JsonKey(name: '_avg')
   final NestedFloatFilter? $avg;
 
-  @JsonKey(name: r'_sum')
+  @JsonKey(name: '_sum')
   final NestedIntFilter? $sum;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedIntFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedIntFilter? $max;
 
   @override
@@ -1432,12 +1430,12 @@ class StringNullableWithAggregatesFilter implements _i1.JsonSerializable {
   });
 
   factory StringNullableWithAggregatesFilter.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$StringNullableWithAggregatesFilterFromJson(json);
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -1458,13 +1456,13 @@ class StringNullableWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedStringNullableWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntNullableFilter? $count;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedStringNullableFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedStringNullableFilter? $max;
 
   @override
@@ -1495,7 +1493,7 @@ class IntNullableWithAggregatesFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -1510,19 +1508,19 @@ class IntNullableWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedIntNullableWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntNullableFilter? $count;
 
-  @JsonKey(name: r'_avg')
+  @JsonKey(name: '_avg')
   final NestedFloatNullableFilter? $avg;
 
-  @JsonKey(name: r'_sum')
+  @JsonKey(name: '_sum')
   final NestedIntNullableFilter? $sum;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedIntNullableFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedIntNullableFilter? $max;
 
   @override
@@ -1551,7 +1549,7 @@ class StringFilter implements _i1.JsonSerializable {
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -1586,7 +1584,7 @@ class BakeryRelationFilter implements _i1.JsonSerializable {
   factory BakeryRelationFilter.fromJson(Map<String, dynamic> json) =>
       _$BakeryRelationFilterFromJson(json);
 
-  @JsonKey(name: r'is')
+  @JsonKey(name: 'is')
   final BakeryWhereInput? $is;
 
   final BakeryWhereInput? isNot;
@@ -1609,22 +1607,22 @@ class CakeCountOrderByAggregateInput implements _i1.JsonSerializable {
   factory CakeCountOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeCountOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final SortOrder? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final SortOrder? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final SortOrder? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   @override
@@ -1641,10 +1639,10 @@ class CakeAvgOrderByAggregateInput implements _i1.JsonSerializable {
   factory CakeAvgOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeAvgOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
   @override
@@ -1665,22 +1663,22 @@ class CakeMaxOrderByAggregateInput implements _i1.JsonSerializable {
   factory CakeMaxOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeMaxOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final SortOrder? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final SortOrder? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final SortOrder? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   @override
@@ -1701,22 +1699,22 @@ class CakeMinOrderByAggregateInput implements _i1.JsonSerializable {
   factory CakeMinOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeMinOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final SortOrder? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final SortOrder? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final SortOrder? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final SortOrder? url;
 
   @override
@@ -1733,10 +1731,10 @@ class CakeSumOrderByAggregateInput implements _i1.JsonSerializable {
   factory CakeSumOrderByAggregateInput.fromJson(Map<String, dynamic> json) =>
       _$CakeSumOrderByAggregateInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final SortOrder? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final SortOrder? bakeryId;
 
   @override
@@ -1767,7 +1765,7 @@ class StringWithAggregatesFilter implements _i1.JsonSerializable {
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -1788,13 +1786,13 @@ class StringWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedStringWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntFilter? $count;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedStringFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedStringFilter? $max;
 
   @override
@@ -1811,7 +1809,7 @@ class CakeCreateNestedManyWithoutBakeryInput implements _i1.JsonSerializable {
   });
 
   factory CakeCreateNestedManyWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeCreateNestedManyWithoutBakeryInputFromJson(json);
 
   final Iterable<CakeCreateWithoutBakeryInput>? create;
@@ -1838,7 +1836,7 @@ class CakeUncheckedCreateNestedManyWithoutBakeryInput
   });
 
   factory CakeUncheckedCreateNestedManyWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUncheckedCreateNestedManyWithoutBakeryInputFromJson(json);
 
   final Iterable<CakeCreateWithoutBakeryInput>? create;
@@ -1859,7 +1857,7 @@ class NullableStringFieldUpdateOperationsInput implements _i1.JsonSerializable {
   const NullableStringFieldUpdateOperationsInput({this.set});
 
   factory NullableStringFieldUpdateOperationsInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$NullableStringFieldUpdateOperationsInputFromJson(json);
 
   final String? set;
@@ -1880,7 +1878,7 @@ class NullableIntFieldUpdateOperationsInput implements _i1.JsonSerializable {
   });
 
   factory NullableIntFieldUpdateOperationsInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$NullableIntFieldUpdateOperationsInputFromJson(json);
 
   final int? set;
@@ -1915,7 +1913,7 @@ class CakeUpdateManyWithoutBakeryNestedInput implements _i1.JsonSerializable {
   });
 
   factory CakeUpdateManyWithoutBakeryNestedInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUpdateManyWithoutBakeryNestedInputFromJson(json);
 
   final Iterable<CakeCreateWithoutBakeryInput>? create;
@@ -1990,7 +1988,7 @@ class CakeUncheckedUpdateManyWithoutBakeryNestedInput
   });
 
   factory CakeUncheckedUpdateManyWithoutBakeryNestedInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUncheckedUpdateManyWithoutBakeryNestedInputFromJson(json);
 
   final Iterable<CakeCreateWithoutBakeryInput>? create;
@@ -2029,7 +2027,7 @@ class BakeryCreateNestedOneWithoutCakeInput implements _i1.JsonSerializable {
   });
 
   factory BakeryCreateNestedOneWithoutCakeInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryCreateNestedOneWithoutCakeInputFromJson(json);
 
   final BakeryCreateWithoutCakeInput? create;
@@ -2048,7 +2046,7 @@ class StringFieldUpdateOperationsInput implements _i1.JsonSerializable {
   const StringFieldUpdateOperationsInput({this.set});
 
   factory StringFieldUpdateOperationsInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$StringFieldUpdateOperationsInputFromJson(json);
 
   final String? set;
@@ -2071,7 +2069,7 @@ class BakeryUpdateOneWithoutCakeNestedInput implements _i1.JsonSerializable {
   });
 
   factory BakeryUpdateOneWithoutCakeNestedInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryUpdateOneWithoutCakeNestedInputFromJson(json);
 
   final BakeryCreateWithoutCakeInput? create;
@@ -2111,7 +2109,7 @@ class NestedIntFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -2151,7 +2149,7 @@ class NestedStringNullableFilter implements _i1.JsonSerializable {
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -2194,7 +2192,7 @@ class NestedIntNullableFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -2236,7 +2234,7 @@ class NestedIntWithAggregatesFilter implements _i1.JsonSerializable {
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -2251,19 +2249,19 @@ class NestedIntWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedIntWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntFilter? $count;
 
-  @JsonKey(name: r'_avg')
+  @JsonKey(name: '_avg')
   final NestedFloatFilter? $avg;
 
-  @JsonKey(name: r'_sum')
+  @JsonKey(name: '_sum')
   final NestedIntFilter? $sum;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedIntFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedIntFilter? $max;
 
   @override
@@ -2288,7 +2286,7 @@ class NestedFloatFilter implements _i1.JsonSerializable {
 
   final double? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<double>? $in;
 
   final Iterable<double>? notIn;
@@ -2327,12 +2325,12 @@ class NestedStringNullableWithAggregatesFilter implements _i1.JsonSerializable {
   });
 
   factory NestedStringNullableWithAggregatesFilter.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$NestedStringNullableWithAggregatesFilterFromJson(json);
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -2353,13 +2351,13 @@ class NestedStringNullableWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedStringNullableWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntNullableFilter? $count;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedStringNullableFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedStringNullableFilter? $max;
 
   @override
@@ -2386,12 +2384,12 @@ class NestedIntNullableWithAggregatesFilter implements _i1.JsonSerializable {
   });
 
   factory NestedIntNullableWithAggregatesFilter.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$NestedIntNullableWithAggregatesFilterFromJson(json);
 
   final int? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<int>? $in;
 
   final Iterable<int>? notIn;
@@ -2406,19 +2404,19 @@ class NestedIntNullableWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedIntNullableWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntNullableFilter? $count;
 
-  @JsonKey(name: r'_avg')
+  @JsonKey(name: '_avg')
   final NestedFloatNullableFilter? $avg;
 
-  @JsonKey(name: r'_sum')
+  @JsonKey(name: '_sum')
   final NestedIntNullableFilter? $sum;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedIntNullableFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedIntNullableFilter? $max;
 
   @override
@@ -2444,7 +2442,7 @@ class NestedFloatNullableFilter implements _i1.JsonSerializable {
 
   final double? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<double>? $in;
 
   final Iterable<double>? notIn;
@@ -2484,7 +2482,7 @@ class NestedStringFilter implements _i1.JsonSerializable {
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -2529,12 +2527,12 @@ class NestedStringWithAggregatesFilter implements _i1.JsonSerializable {
   });
 
   factory NestedStringWithAggregatesFilter.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$NestedStringWithAggregatesFilterFromJson(json);
 
   final String? equals;
 
-  @JsonKey(name: r'in')
+  @JsonKey(name: 'in')
   final Iterable<String>? $in;
 
   final Iterable<String>? notIn;
@@ -2555,13 +2553,13 @@ class NestedStringWithAggregatesFilter implements _i1.JsonSerializable {
 
   final NestedStringWithAggregatesFilter? not;
 
-  @JsonKey(name: r'_count')
+  @JsonKey(name: '_count')
   final NestedIntFilter? $count;
 
-  @JsonKey(name: r'_min')
+  @JsonKey(name: '_min')
   final NestedStringFilter? $min;
 
-  @JsonKey(name: r'_max')
+  @JsonKey(name: '_max')
   final NestedStringFilter? $max;
 
   @override
@@ -2581,16 +2579,16 @@ class CakeCreateWithoutBakeryInput implements _i1.JsonSerializable {
   factory CakeCreateWithoutBakeryInput.fromJson(Map<String, dynamic> json) =>
       _$CakeCreateWithoutBakeryInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -2600,30 +2598,29 @@ class CakeCreateWithoutBakeryInput implements _i1.JsonSerializable {
 @_i1.jsonSerializable
 class CakeUncheckedCreateWithoutBakeryInput implements _i1.JsonSerializable {
   const CakeUncheckedCreateWithoutBakeryInput({
-    this.cakeId,
-    required this.cakeName,
+    required this.cakeName, this.cakeId,
     this.cakeCategory,
     this.ingredients,
     this.url,
   });
 
   factory CakeUncheckedCreateWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUncheckedCreateWithoutBakeryInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int? cakeId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -2639,7 +2636,7 @@ class CakeCreateOrConnectWithoutBakeryInput implements _i1.JsonSerializable {
   });
 
   factory CakeCreateOrConnectWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeCreateOrConnectWithoutBakeryInputFromJson(json);
 
   final CakeWhereUniqueInput where;
@@ -2659,7 +2656,7 @@ class CakeCreateManyBakeryInputEnvelope implements _i1.JsonSerializable {
   });
 
   factory CakeCreateManyBakeryInputEnvelope.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeCreateManyBakeryInputEnvelopeFromJson(json);
 
   final Iterable<CakeCreateManyBakeryInput> data;
@@ -2681,7 +2678,7 @@ class CakeUpsertWithWhereUniqueWithoutBakeryInput
   });
 
   factory CakeUpsertWithWhereUniqueWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUpsertWithWhereUniqueWithoutBakeryInputFromJson(json);
 
   final CakeWhereUniqueInput where;
@@ -2704,7 +2701,7 @@ class CakeUpdateWithWhereUniqueWithoutBakeryInput
   });
 
   factory CakeUpdateWithWhereUniqueWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUpdateWithWhereUniqueWithoutBakeryInputFromJson(json);
 
   final CakeWhereUniqueInput where;
@@ -2725,7 +2722,7 @@ class CakeUpdateManyWithWhereWithoutBakeryInput
   });
 
   factory CakeUpdateManyWithWhereWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUpdateManyWithWhereWithoutBakeryInputFromJson(json);
 
   final CakeScalarWhereInput where;
@@ -2760,22 +2757,22 @@ class CakeScalarWhereInput implements _i1.JsonSerializable {
 
   final Iterable<CakeScalarWhereInput>? NOT;
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntFilter? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntNullableFilter? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFilter? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final StringNullableFilter? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final StringNullableFilter? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final StringNullableFilter? url;
 
   @override
@@ -2796,22 +2793,22 @@ class BakeryCreateWithoutCakeInput implements _i1.JsonSerializable {
   factory BakeryCreateWithoutCakeInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryCreateWithoutCakeInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -2831,28 +2828,28 @@ class BakeryUncheckedCreateWithoutCakeInput implements _i1.JsonSerializable {
   });
 
   factory BakeryUncheckedCreateWithoutCakeInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryUncheckedCreateWithoutCakeInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -2868,7 +2865,7 @@ class BakeryCreateOrConnectWithoutCakeInput implements _i1.JsonSerializable {
   });
 
   factory BakeryCreateOrConnectWithoutCakeInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryCreateOrConnectWithoutCakeInputFromJson(json);
 
   final BakeryWhereUniqueInput where;
@@ -2912,22 +2909,22 @@ class BakeryUpdateWithoutCakeInput implements _i1.JsonSerializable {
   factory BakeryUpdateWithoutCakeInput.fromJson(Map<String, dynamic> json) =>
       _$BakeryUpdateWithoutCakeInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final NullableStringFieldUpdateOperationsInput? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final NullableStringFieldUpdateOperationsInput? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final NullableStringFieldUpdateOperationsInput? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final NullableIntFieldUpdateOperationsInput? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final NullableIntFieldUpdateOperationsInput? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -2947,28 +2944,28 @@ class BakeryUncheckedUpdateWithoutCakeInput implements _i1.JsonSerializable {
   });
 
   factory BakeryUncheckedUpdateWithoutCakeInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$BakeryUncheckedUpdateWithoutCakeInputFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final IntFieldUpdateOperationsInput? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final NullableStringFieldUpdateOperationsInput? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final NullableStringFieldUpdateOperationsInput? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final NullableStringFieldUpdateOperationsInput? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final NullableIntFieldUpdateOperationsInput? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final NullableIntFieldUpdateOperationsInput? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -2979,8 +2976,7 @@ class BakeryUncheckedUpdateWithoutCakeInput implements _i1.JsonSerializable {
 @_i1.jsonSerializable
 class CakeCreateManyBakeryInput implements _i1.JsonSerializable {
   const CakeCreateManyBakeryInput({
-    this.cakeId,
-    required this.cakeName,
+    required this.cakeName, this.cakeId,
     this.cakeCategory,
     this.ingredients,
     this.url,
@@ -2989,19 +2985,19 @@ class CakeCreateManyBakeryInput implements _i1.JsonSerializable {
   factory CakeCreateManyBakeryInput.fromJson(Map<String, dynamic> json) =>
       _$CakeCreateManyBakeryInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int? cakeId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -3020,16 +3016,16 @@ class CakeUpdateWithoutBakeryInput implements _i1.JsonSerializable {
   factory CakeUpdateWithoutBakeryInput.fromJson(Map<String, dynamic> json) =>
       _$CakeUpdateWithoutBakeryInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -3047,22 +3043,22 @@ class CakeUncheckedUpdateWithoutBakeryInput implements _i1.JsonSerializable {
   });
 
   factory CakeUncheckedUpdateWithoutBakeryInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUncheckedUpdateWithoutBakeryInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntFieldUpdateOperationsInput? cakeId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -3081,22 +3077,22 @@ class CakeUncheckedUpdateManyWithoutCakeInput implements _i1.JsonSerializable {
   });
 
   factory CakeUncheckedUpdateManyWithoutCakeInput.fromJson(
-          Map<String, dynamic> json) =>
+          Map<String, dynamic> json,) =>
       _$CakeUncheckedUpdateManyWithoutCakeInputFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final IntFieldUpdateOperationsInput? cakeId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final StringFieldUpdateOperationsInput? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final NullableStringFieldUpdateOperationsInput? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final NullableStringFieldUpdateOperationsInput? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final NullableStringFieldUpdateOperationsInput? url;
 
   @override
@@ -3118,25 +3114,25 @@ class Bakery implements _i1.JsonSerializable {
 
   factory Bakery.fromJson(Map<String, dynamic> json) => _$BakeryFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -3147,8 +3143,7 @@ class Bakery implements _i1.JsonSerializable {
 class Cake implements _i1.JsonSerializable {
   const Cake({
     required this.cakeId,
-    this.bakeryId,
-    required this.cakeName,
+    required this.cakeName, this.bakeryId,
     this.cakeCategory,
     this.ingredients,
     this.url,
@@ -3156,22 +3151,22 @@ class Cake implements _i1.JsonSerializable {
 
   factory Cake.fromJson(Map<String, dynamic> json) => _$CakeFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -3194,42 +3189,42 @@ class BakeryFluent<T> extends _i1.PrismaFluent<T> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'cake',
+          'cake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'cake',
+      key: 'cake',
     );
     final fields = CakeScalarFieldEnum.values.toGraphQLFields();
-    compiler(Iterable<Map> cake) =>
+    Iterable<Cake> compiler(Iterable<Map> cake) =>
         cake.map((Map cake) => Cake.fromJson(cake.cast()));
     return query(fields)
         .then((json) => json is Iterable ? compiler(json.cast()) : null);
@@ -3239,11 +3234,11 @@ class BakeryFluent<T> extends _i1.PrismaFluent<T> {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_count',
+          '_count',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_count',
+      key: '_count',
     );
     return BakeryCountOutputType(query);
   }
@@ -3259,15 +3254,15 @@ class CakeFluent<T> extends _i1.PrismaFluent<T> {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'bakery',
+          'bakery',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'bakery',
+      key: 'bakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null,);
     return BakeryFluent<Bakery?>(
       future,
       query,
@@ -3279,23 +3274,23 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   BakeryFluent<Bakery?> findUnique({required BakeryWhereUniqueInput where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findUniquebakery',
+          'findUniquebakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findUniquebakery',
+      key: 'findUniquebakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null,);
     return BakeryFluent<Bakery?>(
       future,
       query,
@@ -3303,28 +3298,28 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }
 
   BakeryFluent<Bakery> findUniqueOrThrow(
-      {required BakeryWhereUniqueInput where}) {
+      {required BakeryWhereUniqueInput where,}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findUniquebakeryOrThrow',
+          'findUniquebakeryOrThrow',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findUniquebakeryOrThrow',
+      key: 'findUniquebakeryOrThrow',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Bakery.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: bakery)'));
+                'Not found OutputTypeRefType.string(value: bakery)',),);
     return BakeryFluent<Bakery>(
       future,
       query,
@@ -3341,43 +3336,43 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findFirstbakery',
+          'findFirstbakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findFirstbakery',
+      key: 'findFirstbakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null,);
     return BakeryFluent<Bakery?>(
       future,
       query,
@@ -3394,45 +3389,45 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findFirstbakeryOrThrow',
+          'findFirstbakeryOrThrow',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findFirstbakeryOrThrow',
+      key: 'findFirstbakeryOrThrow',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Bakery.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: bakery)'));
+                'Not found OutputTypeRefType.string(value: bakery)',),);
     return BakeryFluent<Bakery>(
       future,
       query,
@@ -3449,70 +3444,70 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findManybakery',
+          'findManybakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findManybakery',
+      key: 'findManybakery',
     );
     final fields = BakeryScalarFieldEnum.values.toGraphQLFields();
-    compiler(Iterable<Map> findManybakery) => findManybakery
+    Iterable<Bakery> compiler(Iterable<Map> findManybakery) => findManybakery
         .map((Map findManybakery) => Bakery.fromJson(findManybakery.cast()));
     return query(fields).then((json) => json is Iterable
         ? compiler(json.cast())
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   BakeryFluent<Bakery> create({BakeryCreateInput? data}) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'createOnebakery',
+          'createOnebakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'createOnebakery',
+      key: 'createOnebakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Bakery.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: bakery)'));
+                'Not found OutputTypeRefType.string(value: bakery)',),);
     return BakeryFluent<Bakery>(
       future,
       query,
@@ -3525,30 +3520,30 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
       ),
       _i2.GraphQLArg(
-        r'skipDuplicates',
+        'skipDuplicates',
         skipDuplicates,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'createManybakery',
+          'createManybakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'createManybakery',
+      key: 'createManybakery',
     );
-    final fields = const ['count'].map((e) => _i2.GraphQLField(e));
-    compiler(Map createManybakery) =>
+    final fields = const ['count'].map(_i2.GraphQLField.new);
+    AffectedRowsOutput compiler(Map createManybakery) =>
         AffectedRowsOutput.fromJson(createManybakery.cast());
     return query(fields).then((json) => json is Map
         ? compiler(json)
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   BakeryFluent<Bakery?> update({
@@ -3557,27 +3552,27 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
       ),
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'updateOnebakery',
+          'updateOnebakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'updateOnebakery',
+      key: 'updateOnebakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null,);
     return BakeryFluent<Bakery?>(
       future,
       query,
@@ -3590,30 +3585,30 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
       ),
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'updateManybakery',
+          'updateManybakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'updateManybakery',
+      key: 'updateManybakery',
     );
-    final fields = const ['count'].map((e) => _i2.GraphQLField(e));
-    compiler(Map updateManybakery) =>
+    final fields = const ['count'].map(_i2.GraphQLField.new);
+    AffectedRowsOutput compiler(Map updateManybakery) =>
         AffectedRowsOutput.fromJson(updateManybakery.cast());
     return query(fields).then((json) => json is Map
         ? compiler(json)
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   BakeryFluent<Bakery> upsert({
@@ -3623,33 +3618,33 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'create',
+        'create',
         create,
       ),
       _i2.GraphQLArg(
-        r'update',
+        'update',
         update,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'upsertOnebakery',
+          'upsertOnebakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'upsertOnebakery',
+      key: 'upsertOnebakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Bakery.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: bakery)'));
+                'Not found OutputTypeRefType.string(value: bakery)',),);
     return BakeryFluent<Bakery>(
       future,
       query,
@@ -3659,23 +3654,23 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   BakeryFluent<Bakery?> delete({required BakeryWhereUniqueInput where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'deleteOnebakery',
+          'deleteOnebakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'deleteOnebakery',
+      key: 'deleteOnebakery',
     );
     final future = query(BakeryScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Bakery.fromJson(json.cast<String, dynamic>()) : null,);
     return BakeryFluent<Bakery?>(
       future,
       query,
@@ -3685,26 +3680,26 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   Future<AffectedRowsOutput> deleteMany({BakeryWhereInput? where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'deleteManybakery',
+          'deleteManybakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'deleteManybakery',
+      key: 'deleteManybakery',
     );
-    final fields = const ['count'].map((e) => _i2.GraphQLField(e));
-    compiler(Map deleteManybakery) =>
+    final fields = const ['count'].map(_i2.GraphQLField.new);
+    AffectedRowsOutput compiler(Map deleteManybakery) =>
         AffectedRowsOutput.fromJson(deleteManybakery.cast());
     return query(fields).then((json) => json is Map
         ? compiler(json)
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   AggregateBakery aggregate({
@@ -3716,90 +3711,89 @@ extension BakeryModelDelegateExtension on _i1.ModelDelegate<Bakery> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'aggregatebakery',
+          'aggregatebakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'aggregatebakery',
+      key: 'aggregatebakery',
     );
     return AggregateBakery(query);
   }
 
   Future<Iterable<BakeryGroupByOutputType>> groupBy({
-    BakeryWhereInput? where,
+    required Iterable<BakeryScalarFieldEnum> by, BakeryWhereInput? where,
     Iterable<BakeryOrderByWithAggregationInput>? orderBy,
-    required Iterable<BakeryScalarFieldEnum> by,
     BakeryScalarWhereWithAggregatesInput? having,
     int? take,
     int? skip,
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'by',
+        'by',
         by,
       ),
       _i2.GraphQLArg(
-        r'having',
+        'having',
         having,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'groupBybakery',
+          'groupBybakery',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'groupBybakery',
+      key: 'groupBybakery',
     );
     final fields = by.map((e) => _i2.GraphQLField(e.originalName ?? e.name));
-    compiler(Iterable<Map> groupBybakery) =>
+    Iterable<BakeryGroupByOutputType> compiler(Iterable<Map> groupBybakery) =>
         groupBybakery.map((Map groupBybakery) =>
-            BakeryGroupByOutputType.fromJson(groupBybakery.cast()));
+            BakeryGroupByOutputType.fromJson(groupBybakery.cast()),);
     return query(fields).then((json) => json is Iterable
         ? compiler(json.cast())
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 }
 
@@ -3807,23 +3801,23 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   CakeFluent<Cake?> findUnique({required CakeWhereUniqueInput where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findUniquecake',
+          'findUniquecake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findUniquecake',
+      key: 'findUniquecake',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null,);
     return CakeFluent<Cake?>(
       future,
       query,
@@ -3833,25 +3827,25 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   CakeFluent<Cake> findUniqueOrThrow({required CakeWhereUniqueInput where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findUniquecakeOrThrow',
+          'findUniquecakeOrThrow',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findUniquecakeOrThrow',
+      key: 'findUniquecakeOrThrow',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Cake.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: cake)'));
+                'Not found OutputTypeRefType.string(value: cake)',),);
     return CakeFluent<Cake>(
       future,
       query,
@@ -3868,43 +3862,43 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findFirstcake',
+          'findFirstcake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findFirstcake',
+      key: 'findFirstcake',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null,);
     return CakeFluent<Cake?>(
       future,
       query,
@@ -3921,45 +3915,45 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findFirstcakeOrThrow',
+          'findFirstcakeOrThrow',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findFirstcakeOrThrow',
+      key: 'findFirstcakeOrThrow',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Cake.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: cake)'));
+                'Not found OutputTypeRefType.string(value: cake)',),);
     return CakeFluent<Cake>(
       future,
       query,
@@ -3976,70 +3970,70 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
       _i2.GraphQLArg(
-        r'distinct',
+        'distinct',
         distinct,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'findManycake',
+          'findManycake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'findManycake',
+      key: 'findManycake',
     );
     final fields = CakeScalarFieldEnum.values.toGraphQLFields();
-    compiler(Iterable<Map> findManycake) => findManycake
+    Iterable<Cake> compiler(Iterable<Map> findManycake) => findManycake
         .map((Map findManycake) => Cake.fromJson(findManycake.cast()));
     return query(fields).then((json) => json is Iterable
         ? compiler(json.cast())
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   CakeFluent<Cake> create({required CakeCreateInput data}) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'createOnecake',
+          'createOnecake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'createOnecake',
+      key: 'createOnecake',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Cake.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: cake)'));
+                'Not found OutputTypeRefType.string(value: cake)',),);
     return CakeFluent<Cake>(
       future,
       query,
@@ -4052,30 +4046,30 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
       ),
       _i2.GraphQLArg(
-        r'skipDuplicates',
+        'skipDuplicates',
         skipDuplicates,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'createManycake',
+          'createManycake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'createManycake',
+      key: 'createManycake',
     );
-    final fields = const ['count'].map((e) => _i2.GraphQLField(e));
-    compiler(Map createManycake) =>
+    final fields = const ['count'].map(_i2.GraphQLField.new);
+    AffectedRowsOutput compiler(Map createManycake) =>
         AffectedRowsOutput.fromJson(createManycake.cast());
     return query(fields).then((json) => json is Map
         ? compiler(json)
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   CakeFluent<Cake?> update({
@@ -4084,27 +4078,27 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
       ),
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'updateOnecake',
+          'updateOnecake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'updateOnecake',
+      key: 'updateOnecake',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null,);
     return CakeFluent<Cake?>(
       future,
       query,
@@ -4117,30 +4111,30 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'data',
+        'data',
         data,
       ),
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'updateManycake',
+          'updateManycake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'updateManycake',
+      key: 'updateManycake',
     );
-    final fields = const ['count'].map((e) => _i2.GraphQLField(e));
-    compiler(Map updateManycake) =>
+    final fields = const ['count'].map(_i2.GraphQLField.new);
+    AffectedRowsOutput compiler(Map updateManycake) =>
         AffectedRowsOutput.fromJson(updateManycake.cast());
     return query(fields).then((json) => json is Map
         ? compiler(json)
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   CakeFluent<Cake> upsert({
@@ -4150,33 +4144,33 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'create',
+        'create',
         create,
       ),
       _i2.GraphQLArg(
-        r'update',
+        'update',
         update,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'upsertOnecake',
+          'upsertOnecake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'upsertOnecake',
+      key: 'upsertOnecake',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) => json is Map
             ? Cake.fromJson(json.cast<String, dynamic>())
             : throw Exception(
-                'Not found OutputTypeRefType.string(value: cake)'));
+                'Not found OutputTypeRefType.string(value: cake)',),);
     return CakeFluent<Cake>(
       future,
       query,
@@ -4186,23 +4180,23 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   CakeFluent<Cake?> delete({required CakeWhereUniqueInput where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'deleteOnecake',
+          'deleteOnecake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'deleteOnecake',
+      key: 'deleteOnecake',
     );
     final future = query(CakeScalarFieldEnum.values.toGraphQLFields()).then(
         (json) =>
-            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null);
+            json is Map ? Cake.fromJson(json.cast<String, dynamic>()) : null,);
     return CakeFluent<Cake?>(
       future,
       query,
@@ -4212,26 +4206,26 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   Future<AffectedRowsOutput> deleteMany({CakeWhereInput? where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $mutation([
         _i2.GraphQLField(
-          r'deleteManycake',
+          'deleteManycake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'deleteManycake',
+      key: 'deleteManycake',
     );
-    final fields = const ['count'].map((e) => _i2.GraphQLField(e));
-    compiler(Map deleteManycake) =>
+    final fields = const ['count'].map(_i2.GraphQLField.new);
+    AffectedRowsOutput compiler(Map deleteManycake) =>
         AffectedRowsOutput.fromJson(deleteManycake.cast());
     return query(fields).then((json) => json is Map
         ? compiler(json)
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 
   AggregateCake aggregate({
@@ -4243,89 +4237,88 @@ extension CakeModelDelegateExtension on _i1.ModelDelegate<Cake> {
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'cursor',
+        'cursor',
         cursor,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'aggregatecake',
+          'aggregatecake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'aggregatecake',
+      key: 'aggregatecake',
     );
     return AggregateCake(query);
   }
 
   Future<Iterable<CakeGroupByOutputType>> groupBy({
-    CakeWhereInput? where,
+    required Iterable<CakeScalarFieldEnum> by, CakeWhereInput? where,
     Iterable<CakeOrderByWithAggregationInput>? orderBy,
-    required Iterable<CakeScalarFieldEnum> by,
     CakeScalarWhereWithAggregatesInput? having,
     int? take,
     int? skip,
   }) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
       ),
       _i2.GraphQLArg(
-        r'orderBy',
+        'orderBy',
         orderBy,
       ),
       _i2.GraphQLArg(
-        r'by',
+        'by',
         by,
       ),
       _i2.GraphQLArg(
-        r'having',
+        'having',
         having,
       ),
       _i2.GraphQLArg(
-        r'take',
+        'take',
         take,
       ),
       _i2.GraphQLArg(
-        r'skip',
+        'skip',
         skip,
       ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'groupBycake',
+          'groupBycake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'groupBycake',
+      key: 'groupBycake',
     );
     final fields = by.map((e) => _i2.GraphQLField(e.originalName ?? e.name));
-    compiler(Iterable<Map> groupBycake) => groupBycake.map((Map groupBycake) =>
-        CakeGroupByOutputType.fromJson(groupBycake.cast()));
+    Iterable<CakeGroupByOutputType> compiler(Iterable<Map> groupBycake) => groupBycake.map((Map groupBycake) =>
+        CakeGroupByOutputType.fromJson(groupBycake.cast()),);
     return query(fields).then((json) => json is Iterable
         ? compiler(json.cast())
-        : throw Exception('Unable to parse response'));
+        : throw Exception('Unable to parse response'),);
   }
 }
 
@@ -4344,25 +4337,25 @@ class BakeryGroupByOutputType implements _i1.JsonSerializable {
   factory BakeryGroupByOutputType.fromJson(Map<String, dynamic> json) =>
       _$BakeryGroupByOutputTypeFromJson(json);
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'BAKERY_NAME')
+  @JsonKey(name: 'BAKERY_NAME')
   final String? bakeryName;
 
-  @JsonKey(name: r'ADDRESS')
+  @JsonKey(name: 'ADDRESS')
   final String? address;
 
-  @JsonKey(name: r'DESCRIPTION')
+  @JsonKey(name: 'DESCRIPTION')
   final String? description;
 
-  @JsonKey(name: r'OPEN')
+  @JsonKey(name: 'OPEN')
   final int? open;
 
-  @JsonKey(name: r'CLOSE')
+  @JsonKey(name: 'CLOSE')
   final int? close;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -4383,22 +4376,22 @@ class CakeGroupByOutputType implements _i1.JsonSerializable {
   factory CakeGroupByOutputType.fromJson(Map<String, dynamic> json) =>
       _$CakeGroupByOutputTypeFromJson(json);
 
-  @JsonKey(name: r'CAKE_ID')
+  @JsonKey(name: 'CAKE_ID')
   final int? cakeId;
 
-  @JsonKey(name: r'BAKERY_ID')
+  @JsonKey(name: 'BAKERY_ID')
   final int? bakeryId;
 
-  @JsonKey(name: r'CAKE_NAME')
+  @JsonKey(name: 'CAKE_NAME')
   final String? cakeName;
 
-  @JsonKey(name: r'CAKE_CATEGORY')
+  @JsonKey(name: 'CAKE_CATEGORY')
   final String? cakeCategory;
 
-  @JsonKey(name: r'INGREDIENTS')
+  @JsonKey(name: 'INGREDIENTS')
   final String? ingredients;
 
-  @JsonKey(name: r'URL')
+  @JsonKey(name: 'URL')
   final String? url;
 
   @override
@@ -4427,11 +4420,11 @@ class AggregateBakery {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_count',
+          '_count',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_count',
+      key: '_count',
     );
     return BakeryCountAggregateOutputType(query);
   }
@@ -4440,11 +4433,11 @@ class AggregateBakery {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_avg',
+          '_avg',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_avg',
+      key: '_avg',
     );
     return BakeryAvgAggregateOutputType(query);
   }
@@ -4453,11 +4446,11 @@ class AggregateBakery {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_sum',
+          '_sum',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_sum',
+      key: '_sum',
     );
     return BakerySumAggregateOutputType(query);
   }
@@ -4466,11 +4459,11 @@ class AggregateBakery {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_min',
+          '_min',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_min',
+      key: '_min',
     );
     return BakeryMinAggregateOutputType(query);
   }
@@ -4479,11 +4472,11 @@ class AggregateBakery {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_max',
+          '_max',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_max',
+      key: '_max',
     );
     return BakeryMaxAggregateOutputType(query);
   }
@@ -4498,11 +4491,11 @@ class AggregateCake {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_count',
+          '_count',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_count',
+      key: '_count',
     );
     return CakeCountAggregateOutputType(query);
   }
@@ -4511,11 +4504,11 @@ class AggregateCake {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_avg',
+          '_avg',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_avg',
+      key: '_avg',
     );
     return CakeAvgAggregateOutputType(query);
   }
@@ -4524,11 +4517,11 @@ class AggregateCake {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_sum',
+          '_sum',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_sum',
+      key: '_sum',
     );
     return CakeSumAggregateOutputType(query);
   }
@@ -4537,11 +4530,11 @@ class AggregateCake {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_min',
+          '_min',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_min',
+      key: '_min',
     );
     return CakeMinAggregateOutputType(query);
   }
@@ -4550,11 +4543,11 @@ class AggregateCake {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_max',
+          '_max',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_max',
+      key: '_max',
     );
     return CakeMaxAggregateOutputType(query);
   }
@@ -4568,21 +4561,21 @@ class BakeryCountOutputType {
   Future<int> cake({CakeWhereInput? where}) {
     final args = [
       _i2.GraphQLArg(
-        r'where',
+        'where',
         where,
-      )
+      ),
     ];
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'cake',
+          'cake',
           fields: fields,
           args: args,
-        )
+        ),
       ]),
-      key: r'cake',
+      key: 'cake',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 }
 
@@ -4595,104 +4588,104 @@ class BakeryCountAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> bakeryName() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_NAME',
+          'BAKERY_NAME',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_NAME',
+      key: 'BAKERY_NAME',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> address() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'ADDRESS',
+          'ADDRESS',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'ADDRESS',
+      key: 'ADDRESS',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> description() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'DESCRIPTION',
+          'DESCRIPTION',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'DESCRIPTION',
+      key: 'DESCRIPTION',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> open() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'OPEN',
+          'OPEN',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'OPEN',
+      key: 'OPEN',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> close() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CLOSE',
+          'CLOSE',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CLOSE',
+      key: 'CLOSE',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> url() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'URL',
+          'URL',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'URL',
+      key: 'URL',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> $all() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_all',
+          '_all',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_all',
+      key: '_all',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 }
 
@@ -4705,39 +4698,39 @@ class BakeryAvgAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as double?));
+    return query(const []).then((value) => value as double?);
   }
 
   Future<double?> open() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'OPEN',
+          'OPEN',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'OPEN',
+      key: 'OPEN',
     );
-    return query(const []).then((value) => (value as double?));
+    return query(const []).then((value) => value as double?);
   }
 
   Future<double?> close() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CLOSE',
+          'CLOSE',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CLOSE',
+      key: 'CLOSE',
     );
-    return query(const []).then((value) => (value as double?));
+    return query(const []).then((value) => value as double?);
   }
 }
 
@@ -4750,39 +4743,39 @@ class BakerySumAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> open() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'OPEN',
+          'OPEN',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'OPEN',
+      key: 'OPEN',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> close() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CLOSE',
+          'CLOSE',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CLOSE',
+      key: 'CLOSE',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 }
 
@@ -4795,91 +4788,91 @@ class BakeryMinAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<String?> bakeryName() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_NAME',
+          'BAKERY_NAME',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_NAME',
+      key: 'BAKERY_NAME',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> address() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'ADDRESS',
+          'ADDRESS',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'ADDRESS',
+      key: 'ADDRESS',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> description() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'DESCRIPTION',
+          'DESCRIPTION',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'DESCRIPTION',
+      key: 'DESCRIPTION',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<int?> open() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'OPEN',
+          'OPEN',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'OPEN',
+      key: 'OPEN',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> close() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CLOSE',
+          'CLOSE',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CLOSE',
+      key: 'CLOSE',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<String?> url() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'URL',
+          'URL',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'URL',
+      key: 'URL',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 }
 
@@ -4892,91 +4885,91 @@ class BakeryMaxAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<String?> bakeryName() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_NAME',
+          'BAKERY_NAME',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_NAME',
+      key: 'BAKERY_NAME',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> address() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'ADDRESS',
+          'ADDRESS',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'ADDRESS',
+      key: 'ADDRESS',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> description() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'DESCRIPTION',
+          'DESCRIPTION',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'DESCRIPTION',
+      key: 'DESCRIPTION',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<int?> open() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'OPEN',
+          'OPEN',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'OPEN',
+      key: 'OPEN',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> close() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CLOSE',
+          'CLOSE',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CLOSE',
+      key: 'CLOSE',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<String?> url() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'URL',
+          'URL',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'URL',
+      key: 'URL',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 }
 
@@ -4989,91 +4982,91 @@ class CakeCountAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_ID',
+          'CAKE_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_ID',
+      key: 'CAKE_ID',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> bakeryId() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> cakeName() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_NAME',
+          'CAKE_NAME',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_NAME',
+      key: 'CAKE_NAME',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> cakeCategory() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_CATEGORY',
+          'CAKE_CATEGORY',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_CATEGORY',
+      key: 'CAKE_CATEGORY',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> ingredients() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'INGREDIENTS',
+          'INGREDIENTS',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'INGREDIENTS',
+      key: 'INGREDIENTS',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> url() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'URL',
+          'URL',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'URL',
+      key: 'URL',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 
   Future<int> $all() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'_all',
+          '_all',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'_all',
+      key: '_all',
     );
-    return query(const []).then((value) => (value as int));
+    return query(const []).then((value) => value! as int);
   }
 }
 
@@ -5086,26 +5079,26 @@ class CakeAvgAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_ID',
+          'CAKE_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_ID',
+      key: 'CAKE_ID',
     );
-    return query(const []).then((value) => (value as double?));
+    return query(const []).then((value) => value as double?);
   }
 
   Future<double?> bakeryId() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as double?));
+    return query(const []).then((value) => value as double?);
   }
 }
 
@@ -5118,26 +5111,26 @@ class CakeSumAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_ID',
+          'CAKE_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_ID',
+      key: 'CAKE_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> bakeryId() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 }
 
@@ -5150,78 +5143,78 @@ class CakeMinAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_ID',
+          'CAKE_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_ID',
+      key: 'CAKE_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> bakeryId() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<String?> cakeName() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_NAME',
+          'CAKE_NAME',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_NAME',
+      key: 'CAKE_NAME',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> cakeCategory() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_CATEGORY',
+          'CAKE_CATEGORY',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_CATEGORY',
+      key: 'CAKE_CATEGORY',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> ingredients() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'INGREDIENTS',
+          'INGREDIENTS',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'INGREDIENTS',
+      key: 'INGREDIENTS',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> url() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'URL',
+          'URL',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'URL',
+      key: 'URL',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 }
 
@@ -5234,78 +5227,78 @@ class CakeMaxAggregateOutputType {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_ID',
+          'CAKE_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_ID',
+      key: 'CAKE_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<int?> bakeryId() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'BAKERY_ID',
+          'BAKERY_ID',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'BAKERY_ID',
+      key: 'BAKERY_ID',
     );
-    return query(const []).then((value) => (value as int?));
+    return query(const []).then((value) => value as int?);
   }
 
   Future<String?> cakeName() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_NAME',
+          'CAKE_NAME',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_NAME',
+      key: 'CAKE_NAME',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> cakeCategory() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'CAKE_CATEGORY',
+          'CAKE_CATEGORY',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'CAKE_CATEGORY',
+      key: 'CAKE_CATEGORY',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> ingredients() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'INGREDIENTS',
+          'INGREDIENTS',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'INGREDIENTS',
+      key: 'INGREDIENTS',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 
   Future<String?> url() {
     final query = _i1.PrismaFluent.queryBuilder(
       query: (fields) => $query([
         _i2.GraphQLField(
-          r'URL',
+          'URL',
           fields: fields,
-        )
+        ),
       ]),
-      key: r'URL',
+      key: 'URL',
     );
-    return query(const []).then((value) => (value as String?));
+    return query(const []).then((value) => value as String?);
   }
 }
 
@@ -5324,18 +5317,6 @@ class Datasources implements _i1.JsonSerializable {
 }
 
 class PrismaClient extends _i1.BasePrismaClient<PrismaClient> {
-  PrismaClient._internal(
-    _i3.Engine engine, {
-    _i3.QueryEngineRequestHeaders? headers,
-    _i3.TransactionInfo? transaction,
-  })  : _engine = engine,
-        _headers = headers,
-        _transaction = transaction,
-        super(
-          engine,
-          headers: headers,
-          transaction: transaction,
-        );
 
   factory PrismaClient({
     Datasources? datasources,
@@ -5349,13 +5330,20 @@ class PrismaClient extends _i1.BasePrismaClient<PrismaClient> {
     final engine = _i5.BinaryEngine(
       logger: logger,
       schema:
-          r'Z2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAiZGFydCBydW4gb3JtIgp9CgpkYXRhc291cmNlIGRiIHsKICBwcm92aWRlciA9ICJteXNxbCIKICB1cmwgICAgICA9IGVudigiREFUQUJBU0VfVVJMIikKfQoKbW9kZWwgYmFrZXJ5IHsKICBCQUtFUllfSUQgICBJbnQgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgQkFLRVJZX05BTUUgU3RyaW5nPyBAZGIuVmFyQ2hhcigyNTUpCiAgQUREUkVTUyAgICAgU3RyaW5nPyBAZGIuVmFyQ2hhcigyNTUpCiAgREVTQ1JJUFRJT04gU3RyaW5nPyBAZGIuVGV4dAogIE9QRU4gICAgICAgIEludD8KICBDTE9TRSAgICAgICBJbnQ/CiAgVVJMICAgICAgICAgU3RyaW5nPyBAZGIuVmFyQ2hhcigyNTUpCiAgY2FrZSAgICAgICAgY2FrZVtdCn0KCm1vZGVsIGNha2UgewogIENBS0VfSUQgICAgICAgSW50ICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIEJBS0VSWV9JRCAgICAgSW50PwogIENBS0VfTkFNRSAgICAgU3RyaW5nICBAZGIuVmFyQ2hhcigyNTUpCiAgQ0FLRV9DQVRFR09SWSBTdHJpbmc/IEBkYi5WYXJDaGFyKDI1NSkKICBJTkdSRURJRU5UUyAgIFN0cmluZz8gQGRiLlRleHQKICBVUkwgICAgICAgICAgIFN0cmluZz8gQGRiLlZhckNoYXIoMjU1KQogIGJha2VyeSAgICAgICAgYmFrZXJ5PyBAcmVsYXRpb24oZmllbGRzOiBbQkFLRVJZX0lEXSwgcmVmZXJlbmNlczogW0JBS0VSWV9JRF0sIG9uRGVsZXRlOiBOb0FjdGlvbiwgb25VcGRhdGU6IE5vQWN0aW9uLCBtYXA6ICJjYWtlX2liZmtfMSIpCgogIEBAaW5kZXgoW0JBS0VSWV9JRF0sIG1hcDogIkJBS0VSWV9JRCIpCn0K',
+          'Z2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAiZGFydCBydW4gb3JtIgp9CgpkYXRhc291cmNlIGRiIHsKICBwcm92aWRlciA9ICJteXNxbCIKICB1cmwgICAgICA9IGVudigiREFUQUJBU0VfVVJMIikKfQoKbW9kZWwgYmFrZXJ5IHsKICBCQUtFUllfSUQgICBJbnQgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgQkFLRVJZX05BTUUgU3RyaW5nPyBAZGIuVmFyQ2hhcigyNTUpCiAgQUREUkVTUyAgICAgU3RyaW5nPyBAZGIuVmFyQ2hhcigyNTUpCiAgREVTQ1JJUFRJT04gU3RyaW5nPyBAZGIuVGV4dAogIE9QRU4gICAgICAgIEludD8KICBDTE9TRSAgICAgICBJbnQ/CiAgVVJMICAgICAgICAgU3RyaW5nPyBAZGIuVmFyQ2hhcigyNTUpCiAgY2FrZSAgICAgICAgY2FrZVtdCn0KCm1vZGVsIGNha2UgewogIENBS0VfSUQgICAgICAgSW50ICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIEJBS0VSWV9JRCAgICAgSW50PwogIENBS0VfTkFNRSAgICAgU3RyaW5nICBAZGIuVmFyQ2hhcigyNTUpCiAgQ0FLRV9DQVRFR09SWSBTdHJpbmc/IEBkYi5WYXJDaGFyKDI1NSkKICBJTkdSRURJRU5UUyAgIFN0cmluZz8gQGRiLlRleHQKICBVUkwgICAgICAgICAgIFN0cmluZz8gQGRiLlZhckNoYXIoMjU1KQogIGJha2VyeSAgICAgICAgYmFrZXJ5PyBAcmVsYXRpb24oZmllbGRzOiBbQkFLRVJZX0lEXSwgcmVmZXJlbmNlczogW0JBS0VSWV9JRF0sIG9uRGVsZXRlOiBOb0FjdGlvbiwgb25VcGRhdGU6IE5vQWN0aW9uLCBtYXA6ICJjYWtlX2liZmtfMSIpCgogIEBAaW5kZXgoW0JBS0VSWV9JRF0sIG1hcDogIkJBS0VSWV9JRCIpCn0K',
       datasources: datasources?.toJson().cast() ?? const {},
       executable:
-          r'/Users/lizusha/Desktop/study/for_flutter/flutter_back/cakeshop_be/node_modules/prisma/query-engine-darwin-arm64',
+          '/Users/lizusha/Desktop/study/for_flutter/flutter_back/cakeshop_be/node_modules/prisma/query-engine-darwin-arm64',
     );
     return PrismaClient._internal(engine);
   }
+  PrismaClient._internal(
+    super.engine, {
+    super.headers,
+    super.transaction,
+  })  : _engine = engine,
+        _headers = headers,
+        _transaction = transaction;
 
   final _i3.Engine _engine;
 

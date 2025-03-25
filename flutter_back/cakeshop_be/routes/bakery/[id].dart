@@ -17,7 +17,7 @@ return switch (context.request.method) {
 Future<Response> _getBakeryById(String id) async {
   final prisma = PrismaClient(
   datasources: Datasources(
-    db: "db"));
+    db: ''));
   // print("eheheh");
   final bakery = await prisma.bakery.findUnique(
   where: BakeryWhereUniqueInput(bakeryId: int.parse(id)),
@@ -33,13 +33,13 @@ Future<Response> _getBakeryById(String id) async {
   return Future.value(
     Response.json(
   body: {
-    'bakery_id': bakery.bakeryId,
-    'bakery_name': bakery.bakeryName,
-    'address': bakery.address,
-    'description': bakery.description,
-    'open': bakery.open,
-    'close': bakery.close,
-    'url': bakery.url,
+    'BAKERY_ID': bakery.bakeryId,
+    'BAKERY_NAME': bakery.bakeryName,
+    'ADDRESS': bakery.address,
+    'DESCRIPTION': bakery.description,
+    'OPEN': bakery.open,
+    'CLOSE': bakery.close,
+    'URL': bakery.url,
     'cakes': cakes.map((cake) => {
       'cake_id': cake.cakeId,
       'cake_name': cake.cakeName,

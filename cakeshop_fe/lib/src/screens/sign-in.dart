@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'intro.dart';
 import '../providers/authprovider.dart';
 import 'package:provider/provider.dart';
+import 'bakeries_screen.dart';
 
 
 
@@ -51,7 +52,7 @@ class _SignInState extends State<SignIn>{
             context.read<ApplicationState>().listenAuthChanges();
             Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => Intro()), // Replace with your main screen widget
+                MaterialPageRoute(builder: (context) => Bakeries()), // Replace with your main screen widget
               );
               setState(() {
                 errorMessage = '';});

@@ -71,6 +71,8 @@ flutter:
   #2) https://lottiefiles.com/free-animation/strawberry-8U9DgNEJnw
   assets:
     - assets/lottie/cake.json
+    - assets/images/ribbon.png
+    - assets/images/paper_back.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

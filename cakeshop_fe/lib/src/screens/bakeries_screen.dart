@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
+import '../providers/authprovider.dart';
+import 'package:provider/provider.dart';
+import '../models/bakery.dart';
+import 'cake_screen.dart';
 
 Future<List<Bakery>> fetchBakery() async {
   final response = await http.get(
@@ -21,42 +25,7 @@ Future<List<Bakery>> fetchBakery() async {
   }
 }
 
-class Bakery {
-  final int bakeryId;
-  final String bakeryName;
-  final String address;
-  final String description;
-  final int open;
-  final int close;
-  final String url;
 
-  const Bakery({required this.bakeryId, required this.bakeryName, 
-  required this.address, required this.description, required this.open, required this.close,
-  required this.url});
-
-  factory Bakery.fromJson(Map<String, dynamic> json) {
-    return switch (json) {
-      {
-        'BAKERY_ID': int bakeryId,
-        'BAKERY_NAME': String bakeryName,
-        'ADDRESS': String address,
-        'DESCRIPTION': String description,
-        'OPEN': int open,
-        'CLOSE': int close,
-        'URL': String url,
-      } =>
-        Bakery(
-          bakeryId: bakeryId,
-          bakeryName: bakeryName,
-          address: address,
-          description: description,
-          open: open,
-          close: close,
-          url: url,
-        ),
-      _ => throw const FormatException('Failed to load bakery.'),
-    };
-  }}
 
 
 class Bakeries extends StatefulWidget {
@@ -79,11 +48,18 @@ class _BakeriesState extends State<Bakeries> {
 
   @override
   Widget build(BuildContext context) {
+    final appState = context.watch<ApplicationState>();
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Bakery List'),
-        ),
+        appBar: AppBar(title: appState.loggedIn
+            ? Text(
+                'Hi, ${appState.userName}', // Display the username
+                style: TextStyle(fontSize: 24),
+              )
+            : Text(
+                'Please log in to continue.',
+                style: TextStyle(fontSize: 24),
+              ),),
         body: FutureBuilder<List<Bakery>>(
           future: futureBakery,  // Use futureBakery here
           builder: (context, snapshot) {
@@ -118,7 +94,12 @@ class _BakeriesState extends State<Bakeries> {
                       ],
                     ),
                     onTap: () {
-                      // Handle tap, maybe show more details about the bakery
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BakeryScreen(bakeryId: bakery.bakeryId),
+                        ),
+                      );// Handle tap, maybe show more details about the bakery
                     },
                   );
                 },
